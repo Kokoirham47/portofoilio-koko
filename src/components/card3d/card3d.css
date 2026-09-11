@@ -1,0 +1,12 @@
+.card3d-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: none;
+}
+
+.card3d-wrapper canvas {
+  outline: none;
+}

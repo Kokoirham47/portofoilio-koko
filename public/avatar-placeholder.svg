@@ -1,0 +1,13 @@
+<svg width="480" height="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFC93C" />
+      <stop offset="100%" stop-color="#FF6B4A" />
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg-grad)" d="M240 20c96 0 176 40 208 128 26 72 8 156-48 208-58 54-140 68-212 44-70-24-124-84-140-158C30 168 60 92 128 52 164 30 200 20 240 20z"/>
+  <circle cx="240" cy="212" r="86" fill="#211C34" opacity="0.08"/>
+  <circle cx="240" cy="200" r="78" fill="#FFFAF0"/>
+  <path d="M172 340c14-52 60-84 68-84s54 32 68 84c-40 26-96 26-136 0z" fill="#FFFAF0"/>
+  <text x="240" y="228" font-family="Fredoka, sans-serif" font-size="72" font-weight="600" fill="#211C34" text-anchor="middle">IR</text>
+</svg>

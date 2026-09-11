@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #fffaf0;
+  --ink: #211c34;
+  --coral: #ff6b4a;
+  --teal: #12968a;
+  --sunshine: #ffc93c;
+  --grape: #6c5ce7;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-coral: var(--coral);
+  --color-teal: var(--teal);
+  --color-sunshine: var(--sunshine);
+  --color-grape: var(--grape);
+  --font-display: var(--font-fredoka);
+  --font-body: var(--font-jakarta);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+::selection {
+  background: var(--sunshine);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.squiggle-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.squiggle-underline svg {
+  position: absolute;
+  left: 0;
+  bottom: -0.15em;
+  width: 100%;
+  height: 0.35em;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(0, -18px) rotate(4deg); }
+}
+
+.float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.tilt-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tilt-card:hover {
+  transform: rotate(-1.5deg) translateY(-4px);
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid var(--grape);
+  outline-offset: 3px;
+}
